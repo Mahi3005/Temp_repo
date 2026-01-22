@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #DC2626;
+            --primary: #B71C1C;
             --primary-light: #EF4444;
-            --primary-dark: #B91C1C;
-            --secondary: #EA580C;
-            --accent: #F59E0B;
+            --primary-dark: #7F1D1D;
+            --secondary: #B71C1C;
+            --accent: #DC2626;
             --dark-bg: #0F172A;
             --dark-card: #1E293B;
             --text-main: #1E293B;
@@ -27,10 +27,10 @@
             --border-dark: #334155;
             --success: #10B981;
             --warning: #F59E0B;
-            --shadow-sm: 0 1px 3px rgba(220, 38, 38, 0.08);
-            --shadow-md: 0 4px 12px rgba(220, 38, 38, 0.08);
-            --shadow-lg: 0 10px 25px rgba(220, 38, 38, 0.1);
-            --shadow-xl: 0 20px 40px rgba(220, 38, 38, 0.12);
+            --shadow-sm: 0 1px 3px rgba(183, 28, 28, 0.08);
+            --shadow-md: 0 4px 12px rgba(183, 28, 28, 0.08);
+            --shadow-lg: 0 10px 25px rgba(183, 28, 28, 0.1);
+            --shadow-xl: 0 20px 40px rgba(183, 28, 28, 0.12);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --radius: 12px;
             --radius-lg: 20px;
@@ -101,7 +101,7 @@
         }
 
         .text-gradient {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, var(--primary), #DC2626);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -153,23 +153,25 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background-color: var(--primary);
             color: var(--white);
             box-shadow: var(--shadow-md);
         }
 
         .btn-primary:hover {
+            background-color: #991B1B;
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
-            background: linear-gradient(135deg, var(--secondary), #C2410C);
+            background-color: #991B1B;
             color: var(--white);
             box-shadow: var(--shadow-md);
         }
 
         .btn-secondary:hover {
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
@@ -181,7 +183,7 @@
         }
 
         .btn-outline:hover {
-            background-color: rgba(220, 38, 38, 0.05);
+            background-color: rgba(183, 28, 28, 0.05);
             transform: translateY(-2px);
         }
 
@@ -237,10 +239,7 @@
         }
 
         .logo-text {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
         }
 
         .nav-links {
@@ -265,7 +264,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background-color: var(--primary);
             transition: var(--transition);
         }
 
@@ -302,7 +301,7 @@
             right: -30%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(circle, rgba(220, 38, 38, 0.05) 0%, rgba(220, 38, 38, 0) 70%);
+            background: radial-gradient(circle, rgba(183, 28, 28, 0.05) 0%, rgba(183, 28, 28, 0) 70%);
             z-index: 0;
         }
 
@@ -323,13 +322,13 @@
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            background: linear-gradient(90deg, rgba(220, 38, 38, 0.1), rgba(234, 88, 12, 0.1));
+            background-color: rgba(183, 28, 28, 0.1);
             color: var(--primary);
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             font-weight: 600;
             margin-bottom: 2rem;
-            border: 1px solid rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(183, 28, 28, 0.2);
             backdrop-filter: blur(10px);
         }
 
@@ -359,7 +358,7 @@
 
         .hero-image:hover {
             transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-            box-shadow: var(--shadow-xl), 0 0 40px rgba(220, 38, 38, 0.2);
+            box-shadow: var(--shadow-xl), 0 0 40px rgba(183, 28, 28, 0.2);
         }
 
         .hero-stats {
@@ -377,10 +376,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             line-height: 1;
         }
 
@@ -432,7 +428,7 @@
             left: 0;
             width: 4px;
             height: 0;
-            background: linear-gradient(180deg, var(--primary), var(--accent));
+            background-color: var(--primary);
             transition: var(--transition);
         }
 
@@ -454,13 +450,13 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(245, 158, 11, 0.1));
+            background-color: rgba(183, 28, 28, 0.1);
             color: var(--primary);
         }
 
         /* Lighthouse Feature */
         .lighthouse-section {
-            background: linear-gradient(135deg, #7F1D1D 0%, #9A1C1F 100%);
+            background-color: #7F1D1D;
             color: var(--white);
             border-radius: var(--radius-xl);
             margin: 3rem auto;
@@ -476,7 +472,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(183, 28, 28, 0.1) 0%, transparent 50%);
         }
 
         .lighthouse-content {
@@ -515,13 +511,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(239, 68, 68, 0.15);
+            background:#B71c1c;
             color: #FCA5A5;
             flex-shrink: 0;
         }
 
+        .feature-icon1{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:white;
+            color: #B71C1C;
+            flex-shrink: 0;
+        }
+
         .highlight-box {
-            background: rgba(127, 29, 29, 0.6);
+            background: white;
+            color: #B71C1C;
             border: 1px solid rgba(254, 202, 202, 0.1);
             border-radius: var(--radius-lg);
             padding: 3rem;
@@ -541,7 +550,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #FCA5A5, #FDBA74);
+            background-color: #FCA5A5;
             border-radius: 3px;
         }
 
@@ -569,14 +578,7 @@
             width: 80px;
             height: 4px;
             border-radius: 4px;
-        }
-
-        .creative-category h3::after {
-            background: linear-gradient(90deg, var(--primary), var(--primary-light));
-        }
-
-        .research-category h3::after {
-            background: linear-gradient(90deg, var(--secondary), #F97316);
+            background-color: var(--primary);
         }
 
         .workers-grid {
@@ -602,7 +604,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.03), rgba(234, 88, 12, 0.03));
+            background: linear-gradient(135deg, rgba(183, 28, 28, 0.03), rgba(220, 38, 38, 0.03));
             opacity: 0;
             transition: var(--transition);
         }
@@ -631,13 +633,13 @@
         }
 
         .creative-worker .worker-icon {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+            background-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(183, 28, 28, 0.3);
         }
 
         .research-worker .worker-icon {
-            background: linear-gradient(135deg, var(--secondary), #C2410C);
-            box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+            background-color: #991B1B;
+            box-shadow: 0 8px 20px rgba(153, 27, 27, 0.3);
         }
 
         /* How It Works */
@@ -661,7 +663,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background-color: var(--primary);
             z-index: 0;
         }
 
@@ -676,7 +678,7 @@
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: var(--primary);
             color: var(--white);
             display: flex;
             align-items: center;
@@ -684,7 +686,7 @@
             font-weight: 800;
             font-size: 1.75rem;
             margin: 0 auto 2rem;
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 10px 25px rgba(183, 28, 28, 0.3);
             position: relative;
         }
 
@@ -694,7 +696,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            border: 2px solid rgba(220, 38, 38, 0.3);
+            border: 2px solid rgba(183, 28, 28, 0.3);
             animation: pulse 2s infinite;
         }
 
@@ -732,7 +734,7 @@
 
         .benefit-header {
             padding: 3rem 3rem 2rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: var(--primary);
             color: var(--white);
         }
 
@@ -795,7 +797,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(234, 88, 12, 0.1));
+            background-color: rgba(183, 28, 28, 0.1);
             color: var(--primary);
             flex-shrink: 0;
         }
@@ -829,7 +831,7 @@
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background-color:#B71C1C;
             color: var(--white);
             text-align: center;
             padding: 8rem 0;
@@ -946,7 +948,7 @@
         }
 
         .social-links a:hover {
-            background: rgba(220, 38, 38, 0.2);
+            background: rgba(183, 28, 28, 0.2);
             color: #FCA5A5;
             transform: translateY(-3px);
         }
@@ -1269,7 +1271,7 @@
                     
                     <ul class="feature-list">
                         <li>
-                            <div class="feature-icon">
+                            <div class="feature-icon1">
                                 <i data-lucide="zap"></i>
                             </div>
                             <div>
@@ -1278,7 +1280,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="feature-icon">
+                            <div class="feature-icon1">
                                 <i data-lucide="credit-card"></i>
                             </div>
                             <div>
@@ -1287,7 +1289,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="feature-icon">
+                            <div class="feature-icon1">
                                 <i data-lucide="calendar"></i>
                             </div>
                             <div>
@@ -1296,7 +1298,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="feature-icon">
+                            <div class="feature-icon1">
                                 <i data-lucide="bar-chart-3"></i>
                             </div>
                             <div>
@@ -1308,7 +1310,7 @@
                 </div>
                 
                 <div class="highlight-box">
-                    <h3>With Lighthouse, You Can:</h3>
+                    <h3 style="color: #B71c1c;">With Lighthouse, You Can:</h3>
                     
                     <ul class="feature-list">
                         <li>
@@ -1337,7 +1339,7 @@
                         </li>
                     </ul>
                     
-                    <p style="margin-top: 2rem; font-style: italic; font-weight: 500;">All before a single dollar is spent on media.</p>
+                    <p style="margin-top: 2rem; font-style: italic; font-weight: 500; color: #B71C1C;">All before a single dollar is spent on media.</p>
                 </div>
             </div>
         </div>
