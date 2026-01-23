@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lighthouse by OpinionAds | Free AI-Powered Campaign Planning</title>
+    <title>OpinionAds Lighthouse | Plan Campaigns with AI Before Spending Budget</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,7 +198,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Navigation */
+        /* Navigation - SIMPLIFIED */
         nav {
             position: fixed;
             top: 0;
@@ -226,7 +226,7 @@
         .logo {
             font-weight: 800;
             font-size: 1.75rem;
-            color: var(--dark-bg);
+            color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -238,42 +238,20 @@
             font-size: 1.5rem;
         }
 
-        .logo-text {
-            color: var(--primary);
-        }
-
-        .nav-links {
+        .sticky-cta {
             display: flex;
-            gap: 2.5rem;
             align-items: center;
+            gap: 1.5rem;
         }
 
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover {
+        .waitlist-count {
+            background-color: rgba(183, 28, 28, 0.1);
             color: var(--primary);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 1px solid rgba(183, 28, 28, 0.2);
         }
 
         .mobile-menu-btn {
@@ -285,10 +263,10 @@
             z-index: 1001;
         }
 
-        /* Hero Section - UPDATED LAYOUT */
+        /* Hero Section - OPTIMIZED FOR CONVERSION */
         .hero {
             padding-top: 12rem;
-            padding-bottom: 8rem;
+            padding-bottom: 6rem;
             background: linear-gradient(180deg, #FEF2F2 0%, #FFFFFF 100%);
             overflow: hidden;
             position: relative;
@@ -327,16 +305,107 @@
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             font-weight: 600;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(183, 28, 28, 0.2);
             backdrop-filter: blur(10px);
         }
 
-        .hero-cta {
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        /* Email Capture Form */
+        .email-capture {
+            margin-top: 2.5rem;
+            max-width: 500px;
+        }
+
+        .email-form {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--border);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(183, 28, 28, 0.1);
+        }
+
+        .form-disclaimer {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
             margin-top: 3rem;
             flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .trust-badge i {
+            color: var(--success);
+        }
+
+        /* Progress Indicator */
+        .progress-container {
+            margin-top: 2rem;
+            background-color: rgba(183, 28, 28, 0.05);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #FECACA;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            width: 72%;
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+
+        .progress-text {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
         }
 
         .hero-image-container {
@@ -361,32 +430,7 @@
             box-shadow: var(--shadow-xl), 0 0 40px rgba(183, 28, 28, 0.2);
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: flex-start;
-            gap: 3rem;
-            margin-top: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-        }
-
-        /* Problem Section */
+        /* Problem Section - REWRITTEN FOR PAIN POINTS */
         .problem-section {
             background-color: var(--white);
             position: relative;
@@ -454,150 +498,30 @@
             color: var(--primary);
         }
 
-        /* Lighthouse Feature */
-        .lighthouse-section {
-            background-color: #7F1D1D;
-            color: var(--white);
-            border-radius: var(--radius-xl);
-            margin: 3rem auto;
-            position: relative;
-            overflow: hidden;
-            padding: 6rem 0;
-        }
-
-        .lighthouse-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(183, 28, 28, 0.1) 0%, transparent 50%);
-        }
-
-        .lighthouse-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .lighthouse-content h2, .lighthouse-content h3 {
-            color: var(--white);
-        }
-
-        .lighthouse-content p {
-            color: rgba(254, 226, 226, 0.8);
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-
-        .feature-list li {
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .feature-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background:#B71c1c;
-            color: #FCA5A5;
-            flex-shrink: 0;
-        }
-
-        .feature-icon1{
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background:white;
-            color: #B71C1C;
-            flex-shrink: 0;
-        }
-
-        .highlight-box {
-            background: white;
-            color: #B71C1C;
-            border: 1px solid rgba(254, 202, 202, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .highlight-box h3 {
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .highlight-box h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: #FCA5A5;
-            border-radius: 3px;
-        }
-
-        /* AI Co-Workers */
-        .workers-section {
+        /* Benefits Section */
+        .benefits-section {
             background-color: var(--light-bg);
             position: relative;
         }
 
-        .workers-category {
-            margin-bottom: 4rem;
-        }
-
-        .workers-category h3 {
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 0.75rem;
-        }
-
-        .workers-category h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            border-radius: 4px;
-            background-color: var(--primary);
-        }
-
-        .workers-grid {
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
         }
 
-        .worker-card {
+        .benefit-card {
             background-color: var(--white);
             border-radius: var(--radius-lg);
-            padding: 2.5rem 2rem;
+            padding: 3rem;
             border: 1px solid var(--border);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
 
-        .worker-card::before {
+        .benefit-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -609,17 +533,17 @@
             transition: var(--transition);
         }
 
-        .worker-card:hover::before {
+        .benefit-card:hover::before {
             opacity: 1;
         }
 
-        .worker-card:hover {
+        .benefit-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
             border-color: transparent;
         }
 
-        .worker-icon {
+        .benefit-icon {
             width: 3.5rem;
             height: 3.5rem;
             border-radius: 12px;
@@ -627,22 +551,11 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            color: var(--white);
-            position: relative;
-            z-index: 1;
-        }
-
-        .creative-worker .worker-icon {
             background-color: var(--primary);
-            box-shadow: 0 8px 20px rgba(183, 28, 28, 0.3);
+            color: var(--white);
         }
 
-        .research-worker .worker-icon {
-            background-color: #991B1B;
-            box-shadow: 0 8px 20px rgba(153, 27, 27, 0.3);
-        }
-
-        /* How It Works */
+        /* How It Works - SIMPLIFIED */
         .process-section {
             background-color: var(--white);
             position: relative;
@@ -654,17 +567,6 @@
             gap: 2.5rem;
             margin-top: 4rem;
             position: relative;
-        }
-
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary);
-            z-index: 0;
         }
 
         .process-step {
@@ -690,148 +592,9 @@
             position: relative;
         }
 
-        .step-number::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid rgba(183, 28, 28, 0.3);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.5); opacity: 0; }
-        }
-
-        /* Benefits */
-        .benefits-section {
-            background-color: var(--light-bg);
-            position: relative;
-        }
-
-        .benefits-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .benefit-card {
-            background-color: var(--white);
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .benefit-header {
-            padding: 3rem 3rem 2rem;
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .benefit-content {
-            padding: 2.5rem 3rem 3rem;
-        }
-
-        .benefit-list {
-            list-style: none;
-        }
-
-        .benefit-list li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .benefit-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: 700;
-            font-size: 1.25rem;
-        }
-
-        /* What's Included */
-        .included-section {
-            background-color: var(--white);
-            position: relative;
-        }
-
-        .included-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .included-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .included-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .included-icon {
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(183, 28, 28, 0.1);
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        /* Image Showcase Section */
-        .image-showcase {
-            background-color: var(--light-bg);
-            padding: 6rem 0;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .showcase-image {
-            width: 100%;
-            height: 250px;
-            border-radius: var(--radius-lg);
-            object-fit: cover;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-        }
-
-        .showcase-image:hover {
-            transform: scale(1.03);
-            box-shadow: var(--shadow-lg);
-        }
-
         /* CTA Section */
         .cta-section {
-            background-color:#B71C1C;
+            background-color: #B71C1C;
             color: var(--white);
             text-align: center;
             padding: 8rem 0;
@@ -878,7 +641,40 @@
             z-index: 1;
         }
 
-        /* Footer */
+        /* Sticky Footer CTA */
+        .sticky-footer-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-footer-cta.active {
+            transform: translateY(0);
+        }
+
+        .sticky-footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-text h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .sticky-text p {
+            margin-bottom: 0;
+            font-size: 0.875rem;
+        }
+
+        /* Footer - SIMPLIFIED */
         footer {
             background-color: var(--dark-bg);
             color: var(--text-on-dark);
@@ -901,56 +697,6 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-
-        .footer-heading {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            font-size: 1.125rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.875rem;
-        }
-
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: #FCA5A5;
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.25rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-on-dark);
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: rgba(183, 28, 28, 0.2);
-            color: #FCA5A5;
-            transform: translateY(-3px);
         }
 
         .copyright {
@@ -1000,11 +746,11 @@
                 margin: 0 auto;
             }
             
-            .hero-stats {
+            .email-form {
                 justify-content: center;
             }
             
-            .hero-cta {
+            .social-proof {
                 justify-content: center;
             }
             
@@ -1013,17 +759,14 @@
                 transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
             }
             
-            .lighthouse-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-            
-            .process-steps::before {
-                display: none;
-            }
-            
             .cta-section h2 {
                 font-size: 2.75rem;
+            }
+            
+            .sticky-footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
         }
 
@@ -1040,35 +783,23 @@
                 font-size: 2rem;
             }
             
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: rgba(255, 255, 255, 0.98);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                z-index: 1000;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
             .mobile-menu-btn {
                 display: block;
             }
             
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 3rem;
+            .sticky-cta {
+                display: none;
             }
             
-            .benefits-container {
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .email-input {
+                min-width: 100%;
+            }
+            
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1086,16 +817,6 @@
             }
             
             .cta-buttons .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero-cta .btn {
                 width: 100%;
                 max-width: 300px;
             }
@@ -1119,15 +840,7 @@
                 font-size: 0.875rem;
             }
             
-            .hero-stats {
-                gap: 2rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .problem-card, .worker-card, .included-item {
+            .problem-card, .benefit-card {
                 padding: 2rem 1.5rem;
             }
             
@@ -1138,20 +851,38 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Sticky Footer CTA -->
+    <div class="sticky-footer-cta" id="stickyFooterCTA">
+        <div class="container sticky-footer-content">
+            <div class="sticky-text">
+                <h4>Stop Guessing, Start Planning with AI</h4>
+                <p>Join 2,847+ marketers who already secured early access</p>
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="scrollToEmailForm()">
+                    <i data-lucide="user-plus"></i>
+                    Join AI Planning Waitlist
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation - SIMPLIFIED -->
     <nav id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
                 <i class="fas fa-broadcast-tower logo-icon"></i>
-                <span class="logo-text">OpinionAds</span>
+                OpinionAds
             </a>
             
-            <div class="nav-links" id="navLinks">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#ai-workers" class="nav-link">AI Co-Workers</a>
-                <a href="#benefits" class="nav-link">Benefits</a>
-                <a href="#" class="btn btn-primary">Create Free Account</a>
+            <div class="sticky-cta">
+                <div class="waitlist-count">
+                    <i data-lucide="users"></i>
+                    2,847 Joined
+                </div>
+                <button class="btn btn-primary" onclick="scrollToEmailForm()">
+                    Join Waitlist
+                </button>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1160,455 +891,202 @@
         </div>
     </nav>
 
-    <!-- Hero Section - UPDATED LAYOUT -->
+    <!-- Hero Section - OPTIMIZED FOR CONVERSION -->
     <section class="hero">
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i data-lucide="sparkles"></i>
-                    <span>Free Forever Plan • No Credit Card Required</span>
+                    <i data-lucide="clock"></i>
+                    <span>Early Access Waitlist • Limited Spots Available</span>
                 </div>
                 
-                <h1>Smarter Campaigns Start With <span class="text-gradient">AI Co-Workers</span></h1>
+                <h1>Validate Campaign Success <span class="text-gradient">Before Spending a Dollar</span></h1>
                 
-                <p class="lead">
-                    Get free access to AI assistants trained on real advertising benchmarks and performance data. Plan campaigns with confidence before spending a single dollar on media.
+                <p class="hero-subtitle">
+                    Get early access to Lighthouse — the AI-powered platform that helps advertisers plan high-performance campaigns before media budgets go live. Stop guessing, start planning with confidence.
                 </p>
                 
-                <div class="hero-cta">
-                    <a href="#" class="btn btn-primary">
-                        <i data-lucide="rocket"></i>
-                        Create Free AI Account
-                    </a>
-                    <a href="#how-it-works" class="btn btn-outline">
-                        <i data-lucide="play-circle"></i>
-                        Watch Demo
-                    </a>
+                <!-- Email Capture Form -->
+                <div class="email-capture">
+                    <div class="email-form">
+                        <input type="email" class="email-input" placeholder="Enter your work email to join waitlist" id="emailInput">
+                        <button class="btn btn-primary" onclick="submitEmail()">
+                            <i data-lucide="rocket"></i>
+                            Get Early Access
+                        </button>
+                    </div>
+                    <p class="form-disclaimer">
+                        <i data-lucide="shield-check"></i> Free forever • No credit card • Join 2,847+ marketers
+                    </p>
                 </div>
                 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">4,200+</div>
-                        <div class="stat-label">Advertisers & Agencies</div>
+                <!-- Progress Indicator -->
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Waitlist Spots Filled</span>
+                        <span>72%</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">92%</div>
-                        <div class="stat-label">Increase in Campaign ROI</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10M+</div>
-                        <div class="stat-label">Campaigns Analyzed</div>
+                    <p class="progress-text">Only 821 early access spots remaining</p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <div class="trust-badge">
+                        <i data-lucide="check-circle"></i>
+                        <span>Trusted by 150+ agencies</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i data-lucide="star"></i>
+                        <span>92% campaign ROI increase</span>
                     </div>
                 </div>
             </div>
             
             <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="OpinionAds Lighthouse Dashboard" class="hero-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="AI-Powered Campaign Planning Dashboard" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- Problem Section - REWRITTEN FOR PAIN POINTS -->
     <section class="problem-section">
         <div class="container">
             <div class="section-header">
-                <h2>The Problem With Traditional Campaign Planning</h2>
-                <p class="section-subtitle">Most brands plan campaigns based on assumptions rather than data, leading to wasted budgets and missed opportunities.</p>
+                <h2>Stop Wasting Budget on Guesswork</h2>
+                <p class="section-subtitle">Traditional campaign planning is broken. You're making critical decisions without data, and paying for it with wasted ad spend.</p>
             </div>
             
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <i data-lucide="alert-circle"></i>
+                        <i data-lucide="dollar-sign"></i>
                     </div>
-                    <h3>Assumptions Over Data</h3>
-                    <p>Campaigns are planned on guesswork rather than concrete historical data and predictive insights, leading to suboptimal results.</p>
+                    <h3>Budget Wasted Before Learning</h3>
+                    <p>You discover what works only after your entire budget is spent. By then, it's too late to optimize or course-correct.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <i data-lucide="clock"></i>
+                        <i data-lucide="bar-chart-3"></i>
                     </div>
-                    <h3>Delayed Learning</h3>
-                    <p>Brand lift insights arrive only after budgets are spent, with no chance for real-time optimization or course correction.</p>
+                    <h3>No Predictive Performance Data</h3>
+                    <p>Launching campaigns without knowing how they'll perform is like driving blindfolded. Yet this is how most teams operate.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <i data-lucide="trending-down"></i>
+                        <i data-lucide="target"></i>
                     </div>
-                    <h3>Predictive ROI Gaps</h3>
-                    <p>Agencies struggle to prove ROI potential before campaign launch, creating uncertainty with clients and stakeholders.</p>
+                    <h3>Creative Decisions Based on Gut Feel</h3>
+                    <p>Choosing messaging, visuals, and strategy based on opinions rather than data leads to campaigns that miss the mark.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Showcase Section -->
-    <section class="image-showcase">
+    <!-- Benefits Section -->
+    <section class="benefits-section">
         <div class="container">
             <div class="section-header">
-                <h2>See Lighthouse in Action</h2>
-                <p class="section-subtitle">Get a glimpse of how AI Co-Workers transform campaign planning with data-driven insights.</p>
+                <h2>Plan Campaigns That Actually Perform</h2>
+                <p class="section-subtitle">With Lighthouse, you get AI-powered insights before your budget goes live, turning planning from guessing into a science.</p>
             </div>
             
-            <div class="image-grid">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Marketing Analytics Dashboard" class="showcase-image">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w-800" alt="Data Visualization" class="showcase-image">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="Team Collaboration" class="showcase-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Campaign Performance" class="showcase-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Lighthouse Feature -->
-    <section class="lighthouse-section" id="features">
-        <div class="container">
-            <div class="lighthouse-content">
-                <div>
-                    <h2>What Is Lighthouse?</h2>
-                    <p class="lead">Lighthouse is the entry-level plan that gives advertisers & agencies free access to OpinionAds AI Co-Workers to plan campaigns that perform.</p>
-                    
-                    <ul class="feature-list">
-                        <li>
-                            <div class="feature-icon1">
-                                <i data-lucide="zap"></i>
-                            </div>
-                            <div>
-                                <h4>No Media Budget Required</h4>
-                                <p>Plan and optimize campaigns before committing ad spend.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon1">
-                                <i data-lucide="credit-card"></i>
-                            </div>
-                            <div>
-                                <h4>No Credit Card Needed</h4>
-                                <p>Get started instantly with our free forever plan.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon1">
-                                <i data-lucide="calendar"></i>
-                            </div>
-                            <div>
-                                <h4>No Commitment</h4>
-                                <p>Use as much or as little as you need, no strings attached.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon1">
-                                <i data-lucide="bar-chart-3"></i>
-                            </div>
-                            <div>
-                                <h4>Immediate Value</h4>
-                                <p>Start seeing insights and recommendations from day one.</p>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>De-Risk Campaign Planning</h3>
+                    <p>Validate messaging, creative, and strategy with AI before spending a single dollar on media. Know what works before you launch.</p>
                 </div>
                 
-                <div class="highlight-box">
-                    <h3 style="color: #B71c1c;">With Lighthouse, You Can:</h3>
-                    
-                    <ul class="feature-list">
-                        <li>
-                            <div class="feature-icon">
-                                <i data-lucide="lightbulb"></i>
-                            </div>
-                            <span>Test your campaign ideas before launch</span>
-                        </li>
-                        <li>
-                            <div class="feature-icon">
-                                <i data-lucide="message-square"></i>
-                            </div>
-                            <span>Stress-test messaging & creatives</span>
-                        </li>
-                        <li>
-                            <div class="feature-icon">
-                                <i data-lucide="trending-up"></i>
-                            </div>
-                            <span>Benchmark expected performance</span>
-                        </li>
-                        <li>
-                            <div class="feature-icon">
-                                <i data-lucide="check-circle"></i>
-                            </div>
-                            <span>Validate creative decisions with data</span>
-                        </li>
-                    </ul>
-                    
-                    <p style="margin-top: 2rem; font-style: italic; font-weight: 500; color: #B71C1C;">All before a single dollar is spent on media.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3>Benchmark Against Top Performers</h3>
+                    <p>Compare your expected performance against category benchmarks and historical data from millions of successful campaigns.</p>
                 </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>AI Co-Workers That Actually Help</h3>
+                    <p>Get specialized AI assistants for messaging, creative optimization, and performance prediction — all working together to improve your results.</p>
+                </div>
+            </div>
+            
+            <!-- Mid-Page CTA -->
+            <div class="text-center" style="margin-top: 4rem;">
+                <h3>Ready to stop guessing and start planning with confidence?</h3>
+                <p style="margin-bottom: 2rem;">Join the waitlist and be among the first to access AI-powered campaign planning.</p>
+                <button class="btn btn-primary" onclick="scrollToEmailForm()">
+                    <i data-lucide="user-plus"></i>
+                    Join AI Planning Waitlist
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- AI Co-Workers -->
-    <section class="workers-section" id="ai-workers">
-        <div class="container">
-            <div class="section-header">
-                <h2>Meet Your AI Co-Workers</h2>
-                <p class="section-subtitle">Specialized AI agents focused on creative, messaging, and research to elevate your campaign planning.</p>
-            </div>
-            
-            <div class="workers-category creative-category">
-                <h3>Creative & Messaging Co-Workers</h3>
-                <div class="workers-grid">
-                    <div class="worker-card creative-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="message-square"></i>
-                        </div>
-                        <h4>Survey Assistant</h4>
-                        <p>Construct questions to measure intent, clarity, recall & lift before campaign launch.</p>
-                    </div>
-                    
-                    <div class="worker-card creative-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="type"></i>
-                        </div>
-                        <h4>Tagline & CTA Agent</h4>
-                        <p>Craft headlines & CTAs optimized for attention & conversion based on historical performance data.</p>
-                    </div>
-                    
-                    <div class="worker-card creative-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="palette"></i>
-                        </div>
-                        <h4>Theme Builder Agent</h4>
-                        <p>Create brand-relevant theme & messaging directions that resonate with your target audience.</p>
-                    </div>
-                    
-                    <div class="worker-card creative-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="image"></i>
-                        </div>
-                        <h4>Image Generation Agent</h4>
-                        <p>Generate concept-focused ad images aligned with your campaign message and brand guidelines.</p>
-                    </div>
-                    
-                    <div class="worker-card creative-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="settings"></i>
-                        </div>
-                        <h4>Image Optimizer</h4>
-                        <p>Improve brightness, contrast & attention elements in your visuals for maximum engagement.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="workers-category research-category">
-                <h3>Research & Intelligence Co-Workers</h3>
-                <div class="workers-grid">
-                    <div class="worker-card research-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="file-search"></i>
-                        </div>
-                        <h4>Document Analyst Agent</h4>
-                        <p>Turn briefs, PDFs & decks into strategic insights and actionable recommendations in seconds.</p>
-                    </div>
-                    
-                    <div class="worker-card research-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="trending-up"></i>
-                        </div>
-                        <h4>Brandlift KPI Benchmarking</h4>
-                        <p>Compare expected lift vs category & channel benchmarks before spending your media budget.</p>
-                    </div>
-                    
-                    <div class="worker-card research-worker">
-                        <div class="worker-icon">
-                            <i data-lucide="globe"></i>
-                        </div>
-                        <h4>Programmatic & Social Benchmarking</h4>
-                        <p>Understand CPM, CTR, CTC & performance norms across channels before you launch.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="process-section" id="how-it-works">
+    <!-- How It Works - SIMPLIFIED -->
+    <section class="process-section">
         <div class="container">
             <div class="section-header">
                 <h2>How Lighthouse Works</h2>
-                <p class="section-subtitle">A simple 4-step process to transform how you plan and launch campaigns with confidence.</p>
+                <p class="section-subtitle">A simple 3-step process to transform how you plan campaigns — all before media spend begins.</p>
             </div>
             
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Plan with AI Co-Workers</h3>
-                    <p>Get AI guidance on messaging, visuals, strategy & benchmarks specific to your campaign goals and audience.</p>
+                    <h3>Plan with AI Guidance</h3>
+                    <p>Get AI-powered recommendations for messaging, visuals, and strategy based on millions of campaign benchmarks.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Pre-Test Creative Assumptions</h3>
-                    <p>Simulate attention, recall & clarity before launch to validate what resonates with your target audience.</p>
+                    <h3>Validate Before Launch</h3>
+                    <p>Test creative assumptions and predict performance before spending your budget. Know what will work before you commit.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>Benchmark Expected Performance</h3>
-                    <p>See how your campaign stacks up against category norms and historical benchmarks for similar campaigns.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Plan With Confidence</h3>
-                    <p>Use data-driven insights to build smarter briefs, strategy decks & pitches that win approval and drive results.</p>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 4rem;">
-                <p class="lead"><strong>Outcome:</strong> Avoid wasted media budgets & launch campaigns that perform like the top 1%.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="benefits-section" id="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2>Benefits For Your Team</h2>
-                <p class="section-subtitle">Lighthouse delivers specialized value for both advertisers and agencies.</p>
-            </div>
-            
-            <div class="benefits-container">
-                <div class="benefit-card">
-                    <div class="benefit-header">
-                        <h3>For Advertisers & Brands</h3>
-                    </div>
-                    <div class="benefit-content">
-                        <ul class="benefit-list">
-                            <li>Validate creative & messaging early in the planning process</li>
-                            <li>Benchmark brand lift & recall expectations before spending</li>
-                            <li>Use AI to de-risk campaign planning and reduce uncertainty</li>
-                            <li>Avoid overspending on bad ideas with pre-launch validation</li>
-                            <li>Increase campaign performance from day one with data-driven insights</li>
-                            <li>Present strategy backed by intelligence, not just intuition</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-header">
-                        <h3>For Agencies & Partners</h3>
-                    </div>
-                    <div class="benefit-content">
-                        <ul class="benefit-list">
-                            <li>Lead with strategy - not just campaign execution and delivery</li>
-                            <li>Differentiate from competitors with AI-powered planning capabilities</li>
-                            <li>Provide planning clarity and insights that clients rarely get elsewhere</li>
-                            <li>Create new revenue conversations with value-added strategic services</li>
-                            <li>Win pitches with AI-backed direction and data-driven recommendations</li>
-                            <li>Improve client retention with insight-led touchpoints throughout the relationship</li>
-                        </ul>
-                    </div>
+                    <h3>Launch with Confidence</h3>
+                    <p>Execute campaigns backed by data-driven insights, not guesswork. Achieve results like the top 1% of performers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What's Included -->
-    <section class="included-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What's Included in the Free Lighthouse Plan</h2>
-                <p class="section-subtitle">Everything you need to start planning smarter campaigns today, completely free.</p>
-            </div>
-            
-            <div class="included-grid">
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <div>
-                        <h4>Free AI Co-Workers Access</h4>
-                        <p>Full access to all AI Co-Workers with no credit card required and no usage limits.</p>
-                    </div>
-                </div>
-                
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="bar-chart-2"></i>
-                    </div>
-                    <div>
-                        <h4>US Programmatic & Social Benchmarks</h4>
-                        <p>Industry benchmarks for key channels and ad formats based on millions of campaigns.</p>
-                    </div>
-                </div>
-                
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="target"></i>
-                    </div>
-                    <div>
-                        <h4>Brand Lift KPI Benchmarking</h4>
-                        <p>Compare your expected performance against category averages and top performers.</p>
-                    </div>
-                </div>
-                
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="check-square"></i>
-                    </div>
-                    <div>
-                        <h4>Creative & Messaging Testing</h4>
-                        <p>Complete workflows to validate concepts and messaging before committing media spend.</p>
-                    </div>
-                </div>
-                
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="download"></i>
-                    </div>
-                    <div>
-                        <h4>Exportable Strategic Outputs</h4>
-                        <p>Download insights, benchmarks, and recommendations as PDF/PPT for presentations and briefs.</p>
-                    </div>
-                </div>
-                
-                <div class="included-item">
-                    <div class="included-icon">
-                        <i data-lucide="infinity"></i>
-                    </div>
-                    <div>
-                        <h4>Unlimited Planning Sessions</h4>
-                        <p>Plan as many campaigns as you need within Lighthouse platform limits.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
+    <!-- Final CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Plan Smarter Campaigns With AI - For Free.</h2>
-            <p>Start using AI Co-Workers to build better campaigns before media spend begins. Join thousands of advertisers and agencies already planning with confidence using OpinionAds Lighthouse.</p>
+            <h2>Don't Just Plan Campaigns — Plan Success</h2>
+            <p>Join 2,847+ forward-thinking marketers who are already on the waitlist for AI-powered campaign planning. Early access spots are filling fast.</p>
             
             <div class="cta-buttons">
-                <a href="#" class="btn btn-white">
+                <button class="btn btn-white" onclick="scrollToEmailForm()">
                     <i data-lucide="user-plus"></i>
-                    Create Free AI Account
-                </a>
-                <a href="#" class="btn btn-secondary">
-                    <i data-lucide="video"></i>
-                    Watch Product Tour
-                </a>
+                    Join AI Planning Waitlist
+                </button>
+                <button class="btn btn-secondary" onclick="showDemo()">
+                    <i data-lucide="play-circle"></i>
+                    Watch 2-Min Demo
+                </button>
             </div>
             
             <p style="font-size: 1rem; margin-top: 2.5rem; opacity: 0.9;">
-                <i data-lucide="shield-check"></i> No credit card required • No commitment • Free forever plan
+                <i data-lucide="shield-check"></i> Free forever • No credit card • Limited early access spots
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - SIMPLIFIED -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1617,52 +1095,15 @@
                         <i class="fas fa-broadcast-tower"></i>
                         OpinionAds
                     </div>
-                    <p>AI-powered campaign planning tools for advertisers and agencies. Plan smarter, launch with confidence, and achieve better results.</p>
-                    <div class="social-links">
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="footer-heading">Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Lighthouse</a></li>
-                        <li><a href="#">AI Co-Workers</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">What's New</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="footer-heading">Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Help Center</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="footer-heading">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Partners</a></li>
-                    </ul>
+                    <p>AI-powered campaign planning for forward-thinking marketers. Plan smarter, launch with confidence, achieve better results.</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>© 2023 OpinionAds, Inc. All rights reserved. Built for modern advertising workflows.</p>
+                <p>© 2023 OpinionAds, Inc. All rights reserved.</p>
                 <p style="margin-top: 1rem;">
                     <a href="#" style="color: var(--text-light); margin-right: 1.5rem;">Privacy Policy</a>
-                    <a href="#" style="color: var(--text-light); margin-right: 1.5rem;">Terms of Service</a>
-                    <a href="#" style="color: var(--text-light);">Cookie Policy</a>
+                    <a href="#" style="color: var(--text-light);">Terms of Service</a>
                 </p>
             </div>
         </div>
@@ -1680,68 +1121,104 @@
             } else {
                 navbar.classList.remove('nav-scrolled');
             }
+            
+            // Show/hide sticky footer CTA
+            const stickyCTA = document.getElementById('stickyFooterCTA');
+            if (window.scrollY > 500) {
+                stickyCTA.classList.add('active');
+            } else {
+                stickyCTA.classList.remove('active');
+            }
         });
         
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i data-lucide="x"></i>' : 
-                '<i data-lucide="menu"></i>';
+        // Email form submission
+        function submitEmail() {
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+            
+            if (!email || !email.includes('@')) {
+                emailInput.style.borderColor = '#EF4444';
+                emailInput.placeholder = 'Please enter a valid email address';
+                return;
+            }
+            
+            // Simulate form submission
+            emailInput.value = '';
+            emailInput.placeholder = 'Thank you! Check your email for confirmation.';
+            emailInput.style.borderColor = '#10B981';
+            
+            // Update waitlist count
+            const waitlistCount = document.querySelector('.waitlist-count');
+            const currentCount = parseInt(waitlistCount.textContent.replace(/\D/g, ''));
+            waitlistCount.innerHTML = `<i data-lucide="users"></i> ${(currentCount + 1).toLocaleString()} Joined`;
+            
+            // Update progress bar
+            const progressFill = document.querySelector('.progress-fill');
+            const progressText = document.querySelector('.progress-text');
+            
+            // Simulate progress update
+            setTimeout(() => {
+                progressFill.style.width = '73%';
+                progressText.textContent = 'Only 820 early access spots remaining';
+                
+                // Show success message
+                alert('🎉 Welcome to the waitlist! Check your email for confirmation and early access updates.');
+            }, 500);
+            
             lucide.createIcons();
-        });
+        }
         
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
-                    lucide.createIcons();
-                }
-            });
-        });
+        // Scroll to email form
+        function scrollToEmailForm() {
+            const emailForm = document.querySelector('.email-capture');
+            emailForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Focus on email input
+            setTimeout(() => {
+                document.getElementById('emailInput').focus();
+            }, 500);
+        }
         
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Show demo modal
+        function showDemo() {
+            alert('🚀 Demo coming soon! Join the waitlist to be the first to see Lighthouse in action and get early access.');
+        }
         
-        // Animate elements on scroll with Intersection Observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Auto-focus email input on page load for desktop
+        if (window.innerWidth > 768) {
+            setTimeout(() => {
+                document.getElementById('emailInput').focus();
+            }, 1000);
+        }
         
+        // Animate progress bar on scroll
+        const progressFill = document.querySelector('.progress-fill');
         const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    progressFill.style.transition = 'width 2s ease-in-out';
+                    progressFill.style.width = '72%';
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.progress-container'));
+        
+        // Animate elements on scroll
+        const cards = document.querySelectorAll('.problem-card, .benefit-card, .process-step');
+        const cardObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
         
-        // Add animation classes dynamically
+        // Add animation styles
         const style = document.createElement('style');
         style.textContent = `
-            .problem-card, .worker-card, .process-step, .benefit-card, .included-item, .showcase-image {
+            .problem-card, .benefit-card, .process-step {
                 opacity: 0;
                 transform: translateY(30px);
                 transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
@@ -1751,74 +1228,37 @@
             .process-step {
                 transition-delay: calc(var(--step-index, 0) * 0.1s);
             }
-            
-            .showcase-image {
-                transition-delay: calc(var(--image-index, 0) * 0.1s);
-            }
         `;
         document.head.appendChild(style);
         
-        // Observe elements to animate
-        document.querySelectorAll('.problem-card, .worker-card, .benefit-card, .included-item').forEach((el, index) => {
-            el.style.setProperty('--item-index', index);
-            observer.observe(el);
+        // Observe cards
+        cards.forEach((card, index) => {
+            card.style.setProperty('--card-index', index);
+            cardObserver.observe(card);
         });
         
-        // Process steps with staggered animation
-        document.querySelectorAll('.process-step').forEach((step, index) => {
-            step.style.setProperty('--step-index', index);
-            observer.observe(step);
+        // Email input validation
+        document.getElementById('emailInput').addEventListener('input', function() {
+            this.style.borderColor = '#FECACA';
         });
         
-        // Showcase images with staggered animation
-        document.querySelectorAll('.showcase-image').forEach((image, index) => {
-            image.style.setProperty('--image-index', index);
-            observer.observe(image);
+        // Allow Enter key to submit email
+        document.getElementById('emailInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitEmail();
+            }
         });
         
-        // Add subtle hover effect to all cards
-        document.querySelectorAll('.problem-card, .worker-card, .benefit-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.zIndex = '10';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.zIndex = '1';
-            });
-        });
-        
-        // Initialize stats counter animation
-        const statNumbers = document.querySelectorAll('.stat-number');
-        const statSection = document.querySelector('.hero');
-        
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    statNumbers.forEach(stat => {
-                        const targetText = stat.textContent;
-                        const target = parseInt(targetText.replace(/[^0-9]/g, ''));
-                        let current = 0;
-                        const increment = target / 50;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                            }
-                            
-                            if (targetText.includes('%')) {
-                                stat.textContent = Math.floor(current) + '%';
-                            } else {
-                                stat.textContent = Math.floor(current).toLocaleString() + '+';
-                            }
-                        }, 30);
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        statsObserver.observe(statSection);
+        // Simulate real-time waitlist updates
+        setInterval(() => {
+            const waitlistCount = document.querySelector('.waitlist-count');
+            if (Math.random() > 0.7) { // 30% chance of update
+                const currentCount = parseInt(waitlistCount.textContent.replace(/\D/g, ''));
+                const newCount = currentCount + Math.floor(Math.random() * 3) + 1;
+                waitlistCount.innerHTML = `<i data-lucide="users"></i> ${newCount.toLocaleString()} Joined`;
+                lucide.createIcons();
+            }
+        }, 30000); // Every 30 seconds
     </script>
 </body>
 </html>
