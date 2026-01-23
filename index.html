@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -58,7 +60,12 @@
         }
 
         /* Typography */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
@@ -287,7 +294,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
             position: relative;
             z-index: 1;
         }
@@ -413,6 +420,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 2rem;
         }
 
         /* GIF Container Styling */
@@ -429,7 +437,8 @@
         .gif-frame {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             background: linear-gradient(135deg, #1a1a2e, #16213e);
             overflow: hidden;
         }
@@ -484,9 +493,17 @@
             border-radius: 50%;
         }
 
-        .control-dot.red { background: #ff5f56; }
-        .control-dot.yellow { background: #ffbd2e; }
-        .control-dot.green { background: #27ca3f; }
+        .control-dot.red {
+            background: #ff5f56;
+        }
+
+        .control-dot.yellow {
+            background: #ffbd2e;
+        }
+
+        .control-dot.green {
+            background: #27ca3f;
+        }
 
         /* AI Chat Interface Overlay */
         .ai-chat-container {
@@ -607,12 +624,25 @@
             animation: typing 1.4s infinite;
         }
 
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes typing {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-8px); }
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-8px);
+            }
         }
 
         /* Problem Section - REWRITTEN FOR PAIN POINTS */
@@ -897,15 +927,15 @@
             h1 {
                 font-size: 3rem;
             }
-            
+
             h2 {
                 font-size: 2.5rem;
             }
-            
+
             .container {
                 padding: 0 1.5rem;
             }
-            
+
             .hero-container {
                 gap: 3rem;
             }
@@ -915,34 +945,34 @@
             h1 {
                 font-size: 2.75rem;
             }
-            
+
             h2 {
                 font-size: 2.25rem;
             }
-            
+
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 4rem;
                 text-align: center;
             }
-            
+
             .hero-content {
                 max-width: 100%;
                 margin: 0 auto;
             }
-            
+
             .email-form {
                 justify-content: center;
             }
-            
+
             .social-proof {
                 justify-content: center;
             }
-            
+
             .cta-section h2 {
                 font-size: 2.75rem;
             }
-            
+
             .sticky-footer-content {
                 flex-direction: column;
                 gap: 1rem;
@@ -954,48 +984,48 @@
             section {
                 padding: 4rem 0;
             }
-            
+
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .sticky-cta {
                 display: none;
             }
-            
+
             .email-form {
                 flex-direction: column;
             }
-            
+
             .email-input {
                 min-width: 100%;
             }
-            
+
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .cta-section {
                 padding: 6rem 0;
             }
-            
+
             .cta-section h2 {
                 font-size: 2.25rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .cta-buttons .btn {
                 width: 100%;
                 max-width: 300px;
@@ -1006,26 +1036,100 @@
             h1 {
                 font-size: 2.25rem;
             }
-            
+
             h2 {
                 font-size: 1.875rem;
             }
-            
+
             .container {
                 padding: 0 1rem;
             }
-            
+
             .hero-badge {
                 padding: 0.5rem 1rem;
                 font-size: 0.875rem;
             }
-            
-            .problem-card, .benefit-card {
+
+            .problem-card,
+            .benefit-card {
                 padding: 2rem 1.5rem;
             }
         }
+
+        /* Logo Carousel - TEXT VERSION */
+        .logo-carousel-section {
+            padding: 3rem 0;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--light-bg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .logo-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 1.5rem 0;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .logo-track {
+            display: flex;
+            width: fit-content;
+            gap: 4rem;
+            /* Consistent spacing between names */
+            animation: scroll 60s linear infinite;
+            /* Slower for readability */
+            padding-left: 4rem;
+            /* Initial offset matches gap */
+        }
+
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-slide {
+            width: auto;
+            /* Allow text to determine width */
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #94A3B8;
+            /* Muted gray text */
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            cursor: default;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .company-name:hover {
+            color: var(--primary);
+            /* Brand color on hover */
+            transform: scale(1.05);
+        }
+
+        /* Continuous Scroll Animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 2rem));
+            }
+
+            /* Adjust for gap */
+        }
     </style>
 </head>
+
 <body>
     <!-- Sticky Footer CTA -->
     <div class="sticky-footer-cta" id="stickyFooterCTA">
@@ -1050,7 +1154,7 @@
                 <i class="fas fa-broadcast-tower logo-icon"></i>
                 OpinionAds
             </a>
-            
+
             <div class="sticky-cta">
                 <div class="waitlist-count">
                     <i data-lucide="users"></i>
@@ -1060,7 +1164,7 @@
                     Join Waitlist
                 </button>
             </div>
-            
+
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i data-lucide="menu"></i>
             </button>
@@ -1075,17 +1179,20 @@
                     <i data-lucide="clock"></i>
                     <span>Early Access Waitlist • Limited Spots Available</span>
                 </div>
-                
+
                 <h1>Validate Campaign Success <span class="text-gradient">Before Spending a Dollar</span></h1>
-                
+
                 <p class="hero-subtitle">
-                    Get early access to Lighthouse — the AI-powered platform that helps advertisers plan high-performance campaigns before media budgets go live. Stop guessing, start planning with confidence.
+                    Get early access to Lighthouse — the AI-powered platform that helps advertisers plan
+                    high-performance campaigns before media budgets go live. Stop guessing, start planning with
+                    confidence.
                 </p>
-                
+
                 <!-- Email Capture Form -->
                 <div class="email-capture">
                     <div class="email-form">
-                        <input type="email" class="email-input" placeholder="Enter your work email to join waitlist" id="emailInput">
+                        <input type="email" class="email-input" placeholder="Enter your work email to join waitlist"
+                            id="emailInput">
                         <button class="btn btn-primary" onclick="submitEmail()">
                             <i data-lucide="rocket"></i>
                             Get Early Access
@@ -1095,7 +1202,7 @@
                         <i data-lucide="shield-check"></i> Free forever • No credit card • Join 2,847+ marketers
                     </p>
                 </div>
-                
+
                 <!-- Progress Indicator -->
                 <div class="progress-container">
                     <div class="progress-label">
@@ -1107,7 +1214,7 @@
                     </div>
                     <p class="progress-text">Only 821 early access spots remaining</p>
                 </div>
-                
+
                 <!-- Social Proof -->
                 <div class="social-proof">
                     <div class="trust-badge">
@@ -1120,14 +1227,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- GIF Container with AI Demo -->
             <div class="hero-image-container">
                 <div class="gif-container">
                     <div class="gif-frame">
                         <!-- Placeholder for GIF - Will be replaced with actual GIF -->
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHN1b3Y1N3BlZ21kYnluZm9ucTF4d2Y4OXFmYXpsZ2x1bWtkdjNtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZ6B8v5/giphy.gif" alt="AI Campaign Planning Demo" class="gif-screen">
-                        
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHN1b3Y1N3BlZ21kYnluZm9ucTF4d2Y4OXFmYXpsZ2x1bWtkdjNtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZ6B8v5/giphy.gif"
+                            alt="AI Campaign Planning Demo" class="gif-screen">
+
                         <!-- AI Chat Interface Overlay -->
                         <div class="gif-overlay">
                             <div class="screen-header">
@@ -1141,7 +1249,7 @@
                                     <div class="control-dot green"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="ai-chat-container">
                                 <div class="chat-header">
                                     <div class="ai-avatar">
@@ -1149,35 +1257,38 @@
                                     </div>
                                     <div style="color: white; font-weight: 600;">AI Campaign Planner</div>
                                 </div>
-                                
+
                                 <div class="chat-messages" id="chatMessages">
                                     <div class="message ai-message">
                                         <div class="message-bubble">
-                                            Hi! I'm your AI campaign assistant. I can help you validate messaging, predict performance, and optimize creatives before you spend your budget.
+                                            Hi! I'm your AI campaign assistant. I can help you validate messaging,
+                                            predict performance, and optimize creatives before you spend your budget.
                                         </div>
                                     </div>
-                                    
+
                                     <div class="message user-message">
                                         <div class="message-bubble">
                                             "Analyze this campaign brief and predict CTR for our target audience"
                                         </div>
                                     </div>
-                                    
+
                                     <div class="message ai-message">
                                         <div class="message-bubble">
-                                            Based on 10M+ campaign benchmarks, I predict a 3.8-4.2% CTR. Your messaging scores 87/100 for clarity. Try A/B testing headline variations to improve.
+                                            Based on 10M+ campaign benchmarks, I predict a 3.8-4.2% CTR. Your messaging
+                                            scores 87/100 for clarity. Try A/B testing headline variations to improve.
                                         </div>
                                     </div>
-                                    
+
                                     <div class="typing-indicator" id="typingIndicator">
                                         <div class="typing-dot"></div>
                                         <div class="typing-dot"></div>
                                         <div class="typing-dot"></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="chat-input">
-                                    <input type="text" class="input-field" placeholder="Ask AI to analyze your campaign..." id="chatInput">
+                                    <input type="text" class="input-field"
+                                        placeholder="Ask AI to analyze your campaign..." id="chatInput">
                                     <button class="send-button" onclick="sendAIMessage()">
                                         <i data-lucide="send"></i>
                                     </button>
@@ -1190,37 +1301,85 @@
         </div>
     </section>
 
+    <!-- Logo Carousel Section -->
+    <section class="logo-carousel-section">
+        <div class="container">
+            <p class="text-center"
+                style="margin-bottom: 2rem; font-size: 0.875rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+                Trusted by forward-thinking teams</p>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Original Set -->
+                    <div class="logo-slide"><span class="company-name">Applecart</span></div>
+                    <div class="logo-slide"><span class="company-name">RevHealth</span></div>
+                    <div class="logo-slide"><span class="company-name">Chemistry Agency</span></div>
+                    <div class="logo-slide"><span class="company-name">PharmEasy</span></div>
+                    <div class="logo-slide"><span class="company-name">Apples of Gold</span></div>
+                    <div class="logo-slide"><span class="company-name">2045</span></div>
+                    <div class="logo-slide"><span class="company-name">Suzy</span></div>
+                    <div class="logo-slide"><span class="company-name">Digo Hispanic Media</span></div>
+                    <div class="logo-slide"><span class="company-name">Forward PMX</span></div>
+                    <div class="logo-slide"><span class="company-name">Frankel Media</span></div>
+                    <div class="logo-slide"><span class="company-name">iProspect</span></div>
+                    <div class="logo-slide"><span class="company-name">AudienceX</span></div>
+                    <div class="logo-slide"><span class="company-name">Advance Publications</span></div>
+                    <div class="logo-slide"><span class="company-name">The Inquirer</span></div>
+
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <div class="logo-slide"><span class="company-name">Applecart</span></div>
+                    <div class="logo-slide"><span class="company-name">RevHealth</span></div>
+                    <div class="logo-slide"><span class="company-name">Chemistry Agency</span></div>
+                    <div class="logo-slide"><span class="company-name">PharmEasy</span></div>
+                    <div class="logo-slide"><span class="company-name">Apples of Gold</span></div>
+                    <div class="logo-slide"><span class="company-name">2045</span></div>
+                    <div class="logo-slide"><span class="company-name">Suzy</span></div>
+                    <div class="logo-slide"><span class="company-name">Digo Hispanic Media</span></div>
+                    <div class="logo-slide"><span class="company-name">Forward PMX</span></div>
+                    <div class="logo-slide"><span class="company-name">Frankel Media</span></div>
+                    <div class="logo-slide"><span class="company-name">iProspect</span></div>
+                    <div class="logo-slide"><span class="company-name">AudienceX</span></div>
+                    <div class="logo-slide"><span class="company-name">Advance Publications</span></div>
+                    <div class="logo-slide"><span class="company-name">The Inquirer</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Problem Section - REWRITTEN FOR PAIN POINTS -->
     <section class="problem-section">
         <div class="container">
             <div class="section-header">
                 <h2>Stop Wasting Budget on Guesswork</h2>
-                <p class="section-subtitle">Traditional campaign planning is broken. You're making critical decisions without data, and paying for it with wasted ad spend.</p>
+                <p class="section-subtitle">Traditional campaign planning is broken. You're making critical decisions
+                    without data, and paying for it with wasted ad spend.</p>
             </div>
-            
+
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="dollar-sign"></i>
                     </div>
                     <h3>Budget Wasted Before Learning</h3>
-                    <p>You discover what works only after your entire budget is spent. By then, it's too late to optimize or course-correct.</p>
+                    <p>You discover what works only after your entire budget is spent. By then, it's too late to
+                        optimize or course-correct.</p>
                 </div>
-                
+
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="bar-chart-3"></i>
                     </div>
                     <h3>No Predictive Performance Data</h3>
-                    <p>Launching campaigns without knowing how they'll perform is like driving blindfolded. Yet this is how most teams operate.</p>
+                    <p>Launching campaigns without knowing how they'll perform is like driving blindfolded. Yet this is
+                        how most teams operate.</p>
                 </div>
-                
+
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="target"></i>
                     </div>
                     <h3>Creative Decisions Based on Gut Feel</h3>
-                    <p>Choosing messaging, visuals, and strategy based on opinions rather than data leads to campaigns that miss the mark.</p>
+                    <p>Choosing messaging, visuals, and strategy based on opinions rather than data leads to campaigns
+                        that miss the mark.</p>
                 </div>
             </div>
         </div>
@@ -1231,39 +1390,44 @@
         <div class="container">
             <div class="section-header">
                 <h2>Plan Campaigns That Actually Perform</h2>
-                <p class="section-subtitle">With Lighthouse, you get AI-powered insights before your budget goes live, turning planning from guessing into a science.</p>
+                <p class="section-subtitle">With Lighthouse, you get AI-powered insights before your budget goes live,
+                    turning planning from guessing into a science.</p>
             </div>
-            
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i data-lucide="shield-check"></i>
                     </div>
                     <h3>De-Risk Campaign Planning</h3>
-                    <p>Validate messaging, creative, and strategy with AI before spending a single dollar on media. Know what works before you launch.</p>
+                    <p>Validate messaging, creative, and strategy with AI before spending a single dollar on media. Know
+                        what works before you launch.</p>
                 </div>
-                
+
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i data-lucide="trending-up"></i>
                     </div>
                     <h3>Benchmark Against Top Performers</h3>
-                    <p>Compare your expected performance against category benchmarks and historical data from millions of successful campaigns.</p>
+                    <p>Compare your expected performance against category benchmarks and historical data from millions
+                        of successful campaigns.</p>
                 </div>
-                
+
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i data-lucide="zap"></i>
                     </div>
                     <h3>AI Co-Workers That Actually Help</h3>
-                    <p>Get specialized AI assistants for messaging, creative optimization, and performance prediction — all working together to improve your results.</p>
+                    <p>Get specialized AI assistants for messaging, creative optimization, and performance prediction —
+                        all working together to improve your results.</p>
                 </div>
             </div>
-            
+
             <!-- Mid-Page CTA -->
             <div class="text-center" style="margin-top: 4rem;">
                 <h3>Ready to stop guessing and start planning with confidence?</h3>
-                <p style="margin-bottom: 2rem;">Join the waitlist and be among the first to access AI-powered campaign planning.</p>
+                <p style="margin-bottom: 2rem;">Join the waitlist and be among the first to access AI-powered campaign
+                    planning.</p>
                 <button class="btn btn-primary" onclick="scrollToEmailForm()">
                     <i data-lucide="user-plus"></i>
                     Join AI Planning Waitlist
@@ -1277,26 +1441,30 @@
         <div class="container">
             <div class="section-header">
                 <h2>How Lighthouse Works</h2>
-                <p class="section-subtitle">A simple 3-step process to transform how you plan campaigns — all before media spend begins.</p>
+                <p class="section-subtitle">A simple 3-step process to transform how you plan campaigns — all before
+                    media spend begins.</p>
             </div>
-            
+
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Plan with AI Guidance</h3>
-                    <p>Get AI-powered recommendations for messaging, visuals, and strategy based on millions of campaign benchmarks.</p>
+                    <p>Get AI-powered recommendations for messaging, visuals, and strategy based on millions of campaign
+                        benchmarks.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Validate Before Launch</h3>
-                    <p>Test creative assumptions and predict performance before spending your budget. Know what will work before you commit.</p>
+                    <p>Test creative assumptions and predict performance before spending your budget. Know what will
+                        work before you commit.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Launch with Confidence</h3>
-                    <p>Execute campaigns backed by data-driven insights, not guesswork. Achieve results like the top 1% of performers.</p>
+                    <p>Execute campaigns backed by data-driven insights, not guesswork. Achieve results like the top 1%
+                        of performers.</p>
                 </div>
             </div>
         </div>
@@ -1306,8 +1474,9 @@
     <section class="cta-section">
         <div class="container">
             <h2>Don't Just Plan Campaigns — Plan Success</h2>
-            <p>Join 2,847+ forward-thinking marketers who are already on the waitlist for AI-powered campaign planning. Early access spots are filling fast.</p>
-            
+            <p>Join 2,847+ forward-thinking marketers who are already on the waitlist for AI-powered campaign planning.
+                Early access spots are filling fast.</p>
+
             <div class="cta-buttons">
                 <button class="btn btn-white" onclick="scrollToEmailForm()">
                     <i data-lucide="user-plus"></i>
@@ -1318,7 +1487,7 @@
                     Watch 2-Min Demo
                 </button>
             </div>
-            
+
             <p style="font-size: 1rem; margin-top: 2.5rem; opacity: 0.9;">
                 <i data-lucide="shield-check"></i> Free forever • No credit card • Limited early access spots
             </p>
@@ -1334,10 +1503,11 @@
                         <i class="fas fa-broadcast-tower"></i>
                         OpinionAds
                     </div>
-                    <p>AI-powered campaign planning for forward-thinking marketers. Plan smarter, launch with confidence, achieve better results.</p>
+                    <p>AI-powered campaign planning for forward-thinking marketers. Plan smarter, launch with
+                        confidence, achieve better results.</p>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>© 2023 OpinionAds, Inc. All rights reserved.</p>
                 <p style="margin-top: 1rem;">
@@ -1351,7 +1521,7 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-        
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -1360,7 +1530,7 @@
             } else {
                 navbar.classList.remove('nav-scrolled');
             }
-            
+
             // Show/hide sticky footer CTA
             const stickyCTA = document.getElementById('stickyFooterCTA');
             if (window.scrollY > 500) {
@@ -1369,67 +1539,67 @@
                 stickyCTA.classList.remove('active');
             }
         });
-        
+
         // Email form submission
         function submitEmail() {
             const emailInput = document.getElementById('emailInput');
             const email = emailInput.value.trim();
-            
+
             if (!email || !email.includes('@')) {
                 emailInput.style.borderColor = '#EF4444';
                 emailInput.placeholder = 'Please enter a valid email address';
                 return;
             }
-            
+
             // Simulate form submission
             emailInput.value = '';
             emailInput.placeholder = 'Thank you! Check your email for confirmation.';
             emailInput.style.borderColor = '#10B981';
-            
+
             // Update waitlist count
             const waitlistCount = document.querySelector('.waitlist-count');
             const currentCount = parseInt(waitlistCount.textContent.replace(/\D/g, ''));
             waitlistCount.innerHTML = `<i data-lucide="users"></i> ${(currentCount + 1).toLocaleString()} Joined`;
-            
+
             // Update progress bar
             const progressFill = document.querySelector('.progress-fill');
             const progressText = document.querySelector('.progress-text');
-            
+
             // Simulate progress update
             setTimeout(() => {
                 progressFill.style.width = '73%';
                 progressText.textContent = 'Only 820 early access spots remaining';
-                
+
                 // Show success message
                 alert('🎉 Welcome to the waitlist! Check your email for confirmation and early access updates.');
             }, 500);
-            
+
             lucide.createIcons();
         }
-        
+
         // Scroll to email form
         function scrollToEmailForm() {
             const emailForm = document.querySelector('.email-capture');
             emailForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
+
             // Focus on email input
             setTimeout(() => {
                 document.getElementById('emailInput').focus();
             }, 500);
         }
-        
+
         // Show demo modal
         function showDemo() {
             alert('🚀 Demo coming soon! Join the waitlist to be the first to see Lighthouse in action and get early access.');
         }
-        
+
         // Auto-focus email input on page load for desktop
         if (window.innerWidth > 768) {
             setTimeout(() => {
                 document.getElementById('emailInput').focus();
             }, 1000);
         }
-        
+
         // Animate progress bar on scroll
         const progressFill = document.querySelector('.progress-fill');
         const observer = new IntersectionObserver((entries) => {
@@ -1440,9 +1610,9 @@
                 }
             });
         }, { threshold: 0.5 });
-        
+
         observer.observe(document.querySelector('.progress-container'));
-        
+
         // Animate elements on scroll
         const cards = document.querySelectorAll('.problem-card, .benefit-card, .process-step');
         const cardObserver = new IntersectionObserver((entries) => {
@@ -1453,7 +1623,7 @@
                 }
             });
         }, { threshold: 0.1 });
-        
+
         // Add animation styles
         const style = document.createElement('style');
         style.textContent = `
@@ -1469,25 +1639,25 @@
             }
         `;
         document.head.appendChild(style);
-        
+
         // Observe cards
         cards.forEach((card, index) => {
             card.style.setProperty('--card-index', index);
             cardObserver.observe(card);
         });
-        
+
         // Email input validation
-        document.getElementById('emailInput').addEventListener('input', function() {
+        document.getElementById('emailInput').addEventListener('input', function () {
             this.style.borderColor = '#FECACA';
         });
-        
+
         // Allow Enter key to submit email
-        document.getElementById('emailInput').addEventListener('keypress', function(e) {
+        document.getElementById('emailInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 submitEmail();
             }
         });
-        
+
         // Simulate real-time waitlist updates
         setInterval(() => {
             const waitlistCount = document.querySelector('.waitlist-count');
@@ -1498,14 +1668,14 @@
                 lucide.createIcons();
             }
         }, 30000); // Every 30 seconds
-        
+
         // AI Chat Simulation
         const chatMessages = document.getElementById('chatMessages');
         const typingIndicator = document.getElementById('typingIndicator');
         const chatInput = document.getElementById('chatInput');
-        
+
         typingIndicator.style.display = 'none';
-        
+
         // AI Responses for simulation
         const aiResponses = [
             "Based on analysis of 10M+ campaigns, your messaging scores 89/100 for clarity. I recommend A/B testing these 3 headline variations.",
@@ -1515,31 +1685,31 @@
             "Creative fatigue analysis suggests refreshing visuals every 12 days. I've generated 15 new image variations optimized for your audience.",
             "Budget allocation optimization: Shift 30% from Display to Social for 22% higher ROI based on historical performance data."
         ];
-        
+
         function sendAIMessage() {
             const message = chatInput.value.trim();
             if (!message) return;
-            
+
             // Add user message
             const userMessage = document.createElement('div');
             userMessage.className = 'message user-message';
             userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
             chatMessages.appendChild(userMessage);
-            
+
             // Clear input
             chatInput.value = '';
-            
+
             // Show typing indicator
             typingIndicator.style.display = 'flex';
             chatMessages.scrollTop = chatMessages.scrollHeight;
-            
+
             // AI response after delay
             setTimeout(() => {
                 typingIndicator.style.display = 'none';
-                
+
                 // Get random AI response
                 const aiResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
-                
+
                 const aiMessage = document.createElement('div');
                 aiMessage.className = 'message ai-message';
                 aiMessage.innerHTML = `
@@ -1548,22 +1718,22 @@
                     </div>
                     <div class="message-bubble">${aiResponse}</div>
                 `;
-                
+
                 chatMessages.appendChild(aiMessage);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-                
+
                 // Re-initialize icons in new message
                 lucide.createIcons();
             }, 1500 + Math.random() * 1000);
         }
-        
+
         // Allow Enter key in chat
-        chatInput.addEventListener('keypress', function(e) {
+        chatInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 sendAIMessage();
             }
         });
-        
+
         // Auto-send demo messages every 8 seconds
         let demoMessages = [
             "Analyze my campaign brief and predict performance metrics",
@@ -1571,7 +1741,7 @@
             "What's the optimal budget allocation across channels?",
             "Benchmark my campaign against top competitors"
         ];
-        
+
         let demoIndex = 0;
         setInterval(() => {
             if (demoIndex < demoMessages.length) {
@@ -1580,7 +1750,7 @@
                 demoIndex++;
             }
         }, 8000);
-        
+
         // Initialize with a welcome message after page load
         setTimeout(() => {
             chatInput.value = "How can AI help me plan better campaigns?";
@@ -1588,4 +1758,5 @@
         }, 2000);
     </script>
 </body>
+
 </html>
