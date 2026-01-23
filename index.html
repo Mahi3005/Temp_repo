@@ -415,19 +415,204 @@
             align-items: center;
         }
 
-        .hero-image {
+        /* GIF Container Styling */
+        .gif-container {
+            position: relative;
             width: 100%;
             max-width: 650px;
             border-radius: var(--radius-lg);
+            overflow: hidden;
             box-shadow: var(--shadow-xl);
             border: 1px solid var(--border);
-            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
-            transition: var(--transition);
         }
 
-        .hero-image:hover {
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-            box-shadow: var(--shadow-xl), 0 0 40px rgba(183, 28, 28, 0.2);
+        .gif-frame {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            overflow: hidden;
+        }
+
+        .gif-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* GIF Overlay Elements */
+        .gif-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .screen-header {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .screen-title {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .screen-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .control-dot.red { background: #ff5f56; }
+        .control-dot.yellow { background: #ffbd2e; }
+        .control-dot.green { background: #27ca3f; }
+
+        /* AI Chat Interface Overlay */
+        .ai-chat-container {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-avatar {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #B71C1C, #EF4444);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .chat-messages {
+            padding: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            max-width: 80%;
+        }
+
+        .user-message {
+            margin-left: auto;
+        }
+
+        .ai-message {
+            display: flex;
+            gap: 10px;
+        }
+
+        .message-bubble {
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .user-message .message-bubble {
+            background: linear-gradient(135deg, #B71C1C, #991B1B);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .ai-message .message-bubble {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-input {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-field {
+            flex: 1;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .send-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #B71C1C, #EF4444);
+            border: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* Typing Animation */
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 10px 15px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
         }
 
         /* Problem Section - REWRITTEN FOR PAIN POINTS */
@@ -754,11 +939,6 @@
                 justify-content: center;
             }
             
-            .hero-image {
-                max-width: 600px;
-                transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-            }
-            
             .cta-section h2 {
                 font-size: 2.75rem;
             }
@@ -842,10 +1022,6 @@
             
             .problem-card, .benefit-card {
                 padding: 2rem 1.5rem;
-            }
-            
-            .hero-image {
-                max-width: 100%;
             }
         }
     </style>
@@ -945,8 +1121,71 @@
                 </div>
             </div>
             
+            <!-- GIF Container with AI Demo -->
             <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="AI-Powered Campaign Planning Dashboard" class="hero-image">
+                <div class="gif-container">
+                    <div class="gif-frame">
+                        <!-- Placeholder for GIF - Will be replaced with actual GIF -->
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHN1b3Y1N3BlZ21kYnluZm9ucTF4d2Y4OXFmYXpsZ2x1bWtkdjNtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZ6B8v5/giphy.gif" alt="AI Campaign Planning Demo" class="gif-screen">
+                        
+                        <!-- AI Chat Interface Overlay -->
+                        <div class="gif-overlay">
+                            <div class="screen-header">
+                                <div class="screen-title">
+                                    <i data-lucide="message-square"></i>
+                                    Lighthouse AI Assistant
+                                </div>
+                                <div class="screen-controls">
+                                    <div class="control-dot red"></div>
+                                    <div class="control-dot yellow"></div>
+                                    <div class="control-dot green"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="ai-chat-container">
+                                <div class="chat-header">
+                                    <div class="ai-avatar">
+                                        <i data-lucide="brain"></i>
+                                    </div>
+                                    <div style="color: white; font-weight: 600;">AI Campaign Planner</div>
+                                </div>
+                                
+                                <div class="chat-messages" id="chatMessages">
+                                    <div class="message ai-message">
+                                        <div class="message-bubble">
+                                            Hi! I'm your AI campaign assistant. I can help you validate messaging, predict performance, and optimize creatives before you spend your budget.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="message user-message">
+                                        <div class="message-bubble">
+                                            "Analyze this campaign brief and predict CTR for our target audience"
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="message ai-message">
+                                        <div class="message-bubble">
+                                            Based on 10M+ campaign benchmarks, I predict a 3.8-4.2% CTR. Your messaging scores 87/100 for clarity. Try A/B testing headline variations to improve.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="typing-indicator" id="typingIndicator">
+                                        <div class="typing-dot"></div>
+                                        <div class="typing-dot"></div>
+                                        <div class="typing-dot"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chat-input">
+                                    <input type="text" class="input-field" placeholder="Ask AI to analyze your campaign..." id="chatInput">
+                                    <button class="send-button" onclick="sendAIMessage()">
+                                        <i data-lucide="send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1259,6 +1498,94 @@
                 lucide.createIcons();
             }
         }, 30000); // Every 30 seconds
+        
+        // AI Chat Simulation
+        const chatMessages = document.getElementById('chatMessages');
+        const typingIndicator = document.getElementById('typingIndicator');
+        const chatInput = document.getElementById('chatInput');
+        
+        typingIndicator.style.display = 'none';
+        
+        // AI Responses for simulation
+        const aiResponses = [
+            "Based on analysis of 10M+ campaigns, your messaging scores 89/100 for clarity. I recommend A/B testing these 3 headline variations.",
+            "Your target audience shows 42% higher engagement with emotional vs. logical appeals. I've generated 5 emotional ad concepts.",
+            "Benchmark analysis predicts a 3.8-4.2% CTR for this campaign. Top performers in your category achieve 4.5%+ with these optimizations.",
+            "I've analyzed your competitors' top-performing ads. Here are 7 insights to differentiate your campaign and increase recall by 35%.",
+            "Creative fatigue analysis suggests refreshing visuals every 12 days. I've generated 15 new image variations optimized for your audience.",
+            "Budget allocation optimization: Shift 30% from Display to Social for 22% higher ROI based on historical performance data."
+        ];
+        
+        function sendAIMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user-message';
+            userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+            chatMessages.appendChild(userMessage);
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Show typing indicator
+            typingIndicator.style.display = 'flex';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // AI response after delay
+            setTimeout(() => {
+                typingIndicator.style.display = 'none';
+                
+                // Get random AI response
+                const aiResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+                
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai-message';
+                aiMessage.innerHTML = `
+                    <div class="ai-avatar" style="width: 24px; height: 24px; font-size: 12px;">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <div class="message-bubble">${aiResponse}</div>
+                `;
+                
+                chatMessages.appendChild(aiMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Re-initialize icons in new message
+                lucide.createIcons();
+            }, 1500 + Math.random() * 1000);
+        }
+        
+        // Allow Enter key in chat
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendAIMessage();
+            }
+        });
+        
+        // Auto-send demo messages every 8 seconds
+        let demoMessages = [
+            "Analyze my campaign brief and predict performance metrics",
+            "Generate 5 headline variations for my product launch",
+            "What's the optimal budget allocation across channels?",
+            "Benchmark my campaign against top competitors"
+        ];
+        
+        let demoIndex = 0;
+        setInterval(() => {
+            if (demoIndex < demoMessages.length) {
+                chatInput.value = demoMessages[demoIndex];
+                sendAIMessage();
+                demoIndex++;
+            }
+        }, 8000);
+        
+        // Initialize with a welcome message after page load
+        setTimeout(() => {
+            chatInput.value = "How can AI help me plan better campaigns?";
+            setTimeout(sendAIMessage, 1000);
+        }, 2000);
     </script>
 </body>
 </html>
