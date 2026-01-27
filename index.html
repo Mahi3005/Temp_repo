@@ -1077,11 +1077,11 @@
         .logo-track {
             display: flex;
             width: fit-content;
-            gap: 4rem;
-            /* Consistent spacing between names */
+            gap: 5rem;
+            /* Consistent spacing between logos */
             animation: scroll 60s linear infinite;
             /* Slower for readability */
-            padding-left: 4rem;
+            padding-left: 5rem;
             /* Initial offset matches gap */
         }
 
@@ -1119,14 +1119,10 @@
             height: 80px;
             width: auto;
             object-fit: contain;
-            filter: grayscale(100%);
-            opacity: 0.6;
             transition: all 0.3s ease;
         }
 
         .company-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
             transform: scale(1.05);
         }
 
@@ -1137,10 +1133,8 @@
             }
 
             100% {
-                transform: translateX(calc(-50% - 2rem));
+                transform: translateX(-50%);
             }
-
-            /* Adjust for gap */
         }
     </style>
 </head>
@@ -1339,8 +1333,7 @@
                     <div class="logo-slide"><img src="./Company%20logos/Suzy.png" alt="Suzy" class="company-logo"></div>
                     <div class="logo-slide"><img src="./Company%20logos/Digo.png" alt="Digo Hispanic Media"
                             class="company-logo"></div>
-                    <div class="logo-slide"><img src="./Company%20logos/ForwardPmx.png" alt="Forward PMX"
-                            class="company-logo"></div>
+                    <div class="logo-slide"><span class="company-name">Forward PMX</span></div>
                     <div class="logo-slide"><img src="./Company%20logos/Frankle%20Media.png" alt="Frankel Media"
                             class="company-logo"></div>
                     <div class="logo-slide"><img src="./Company%20logos/IProspect.png" alt="iProspect"
@@ -1366,8 +1359,7 @@
                     <div class="logo-slide"><img src="./Company%20logos/Suzy.png" alt="Suzy" class="company-logo"></div>
                     <div class="logo-slide"><img src="./Company%20logos/Digo.png" alt="Digo Hispanic Media"
                             class="company-logo"></div>
-                    <div class="logo-slide"><img src="./Company%20logos/ForwardPmx.png" alt="Forward PMX"
-                            class="company-logo"></div>
+                    <div class="logo-slide"><span class="company-name">Forward PMX</span></div>
                     <div class="logo-slide"><img src="./Company%20logos/Frankle%20Media.png" alt="Frankel Media"
                             class="company-logo"></div>
                     <div class="logo-slide"><img src="./Company%20logos/IProspect.png" alt="iProspect"
